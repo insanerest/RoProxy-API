@@ -16,8 +16,9 @@ app.get("/api/user_games/:userId", async (req, res) => {
   try {
     const response = await axios.get(url);
     let gameIds = [];
-    for (game in response.data) {
-      gameIds.push(game.id);
+    for (let i = 0; i < response.data.data.length; i++) {
+      console.log(response.data.data);
+      gameIds.push(response.data.data[i].id);
     }
     res.json({ success: true, response: gameIds });
   } catch (error) {
