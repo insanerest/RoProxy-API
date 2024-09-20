@@ -1,13 +1,13 @@
 const express = require("express");
 const path = require("path");
 const axios = require("axios"); // To make HTTP requests to the TV API
-
+const cors = require("cors");
 const app = express();
 const port = 3000;
 
 // Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, "public")));
-
+app.use(cors());
 app.get("/api/user_games/:userId", async (req, res) => {
   const userId = req.params.userId;
   const url = `https://games.roblox.com/v2/users/${userId}/games`; // Replace with your TV's API URL
