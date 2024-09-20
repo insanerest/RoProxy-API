@@ -1,7 +1,7 @@
 {
   "name": "roproxy-api",
   "version": "1.0.0",
-  "description": "A proxy so you can acsess the roblox API",
+  "description": "A proxy so you can access the Roblox API within your game",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.7.7",
     "express": "^4.21.0",
     "path": "^0.12.7"
   }
