@@ -14,7 +14,7 @@ app.get("/api/user_games/:userId", async (req, res) => {
   console.log(url);
 
   try {
-    const response = await axios.post(url);
+    const response = await axios.get(url);
     let gameIds = [];
     for (game in response.data) {
       gameIds.push(game.id);
